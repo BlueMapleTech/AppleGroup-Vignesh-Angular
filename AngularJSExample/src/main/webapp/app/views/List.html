@@ -1,0 +1,39 @@
+<div ng-controller="ListController as list">
+	<div class="well well-sm"><h1>PeopleInformation</h1></div>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th><b>USERID</b></th>
+				<th><b>ADDRESS</b></th>
+				<th><b>EMAILADDRESS</b></th>
+				<th><b>FIRSTNAME</b></th>
+				<th><b>LASTNAME</b></th>
+				<th><b>DELETE</b></th>
+				<th><b>UPDATE</b></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="person in personlist track by $index">
+				<td>{{person.userId}}</td>
+				<td>{{person.address}}</td>
+				<td>{{person.emailAddress}}</td>
+				<td>{{person.firstName}}</td>
+				<td>{{person.lastName}}</td>
+				
+				
+				
+				
+	          <td><a class="btn btn-primary" ng-click="Delete(person.userId)"/>delete</td>
+	          <td><a class="btn btn-primary" ng-click="update(person.userId)"/>update</td> 
+	           
+	         <!-- <td>  <button class="btn btn-primary" ng-click="update(person.userId)">
+          <span class="glyphicon glyphicon-pencil"></span>  Update</button></td> -->
+	           <!-- <td><a class="btn btn-primary" ng-click="updateId(person.userId)">update<td> -->
+	          <!--  <a href="" ng-click="update(person.userId)">update</a> -->
+	          
+			</tr>
+		</tbody>
+	</table>
+	
+	
+</div>
